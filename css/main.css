@@ -1,0 +1,401 @@
+
+:root{
+  --bg-color: #151515;
+  --accent-color: #D8D8D8;
+  --white-color: white;
+  --bg-fog: rgba(0,0,0,0.5)
+}
+
+html, body{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body{
+  background-color: var(--bg-color);
+}
+
+.overlay-container{
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  position: relative;
+}
+
+.background-image{
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 0;
+  margin: 0;
+  line-height: 0;
+  vertical-align: bottom;
+  object-fit:cover;
+}
+
+.last{
+  width: 100%;
+  height: 500px;
+  object-fit:cover;
+}
+
+.text-box{
+  z-index: 10;
+  block-size: fit-content;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: solid;
+  border-color: var(--white-color);
+  border-width: 2px;
+  position: absolute;
+  background: var(--bg-fog);
+}
+
+.text-box div{
+  text-align: center;
+  font-family: "Microsoft Sans Serif", sans-serif;
+  font-size: 2vw;
+  font-weight: normal;
+  color: var(--white-color);
+  margin: 2.5vw 1vw;
+}
+
+footer{
+  z-index: 10;
+  width: inherit;
+  height: 200px;
+  background: var(--bg-fog);
+  bottom: 0;
+  position: absolute;
+  vertical-align: center;
+}
+
+.logo{
+  z-index: 20;
+  block-size: fit-content;
+  width: 200px;
+}
+
+.footer-logo-align{
+  position: absolute;
+  text-align: center;
+  width: inherit;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+header{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+}
+
+header ul{
+  list-style-type: none;
+  margin: 0;
+  overflow: hidden;
+  padding: 1% 0 0 3%;
+}
+
+header ul li{
+  float: left;
+}
+
+.navigation{
+  display: block;
+  color: var(--accent-color);
+  text-align: center;
+  text-decoration: none;
+  font-family: "Microsoft Sans Serif", sans-serif;
+  font-size: 1.3vw;
+  font-weight: normal;
+}
+
+.navigation:hover:not(.active){
+  color: var(--white-color);
+}
+
+.navigation-li{
+  padding-top: 1.5%;
+  padding-left: 3%;
+}
+
+.header-logo{
+  block-size: fit-content;
+}
+
+.header-logo-align{
+  padding-top: 0.4%;
+  width: 10%;
+  padding-right: 5%;
+}
+
+.profile{
+  width: 4%;
+  padding-top: 0.4%;
+  padding-left: 3%;
+}
+
+.profile-logo{
+  block-size: fit-content;
+  fill: var(--accent-color);
+}
+
+.cart{
+  width: 4%;
+  padding-left: 8%;
+}
+
+.cart-logo{
+  block-size: fit-content;
+  fill: var(--accent-color);
+}
+
+.search-box-li{
+  padding-top: 1%;
+  padding-left: 8%;
+}
+
+.search-box-label{
+
+}
+
+.search-box{
+  height: 2vw;
+  width: 9vw;
+  border-radius: 50vw;
+  border: none;
+  background-color: var(--accent-color);
+  text-align: center;
+}
+
+.search-box::placeholder{
+  text-align: center;
+  text-decoration: none;
+  font-family: "Microsoft Sans Serif", sans-serif;
+  font-size: 1.3vw;
+  font-weight: normal;
+  color: rgba(40,40,40,0.51);
+  transform:translateY(0.3vw);
+}
+
+.popup{
+  position: fixed;
+  z-index: 100;
+  block-size: fit-content;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: solid;
+  border-color: var(--accent-color);
+  border-width: 2px;
+  background: var(--bg-color);
+  padding: 3%;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.popup label{
+  display: block;
+  padding-bottom: 20%;
+}
+
+.input-box{
+  height: 2vw;
+  width: 15vw;
+  border: solid;
+  border-color: var(--accent-color);
+  border-width: 2px;
+  background-color: var(--bg-fog);
+  text-align: center;
+  font-family: "Microsoft Sans Serif", sans-serif;
+  font-size: 1.5vw;
+  font-weight: normal;
+  color: var(--white-color);
+}
+
+.input-box::placeholder{
+  text-align: center;
+  font-family: "Microsoft Sans Serif", sans-serif;
+  font-size: 1.5vw;
+  font-weight: normal;
+  color: var(--accent-color);
+  opacity: 0.5;
+}
+
+.popup button{
+  border: solid;
+  border-color: var(--accent-color);
+  border-width: 2px;
+  background-color: var(--bg-fog);
+  text-align: center;
+  font-family: "Microsoft Sans Serif", sans-serif;
+  font-size: 1.5vw;
+  font-weight: normal;
+  color: var(--white-color);
+}
+
+.popup button:hover{
+  cursor: pointer;
+}
+
+.popup button div{
+  padding: 1px;
+}
+
+.popup .list{
+  display: flex;
+}
+
+.popup .name, .symbol, .quantity{
+  block-size: fit-content;
+}
+
+.popup ul{
+  list-style-type: none;
+  margin: 0;
+  overflow: hidden;
+  padding: 0.4vw 0.4vw 20%;
+}
+
+.popup .name li{
+  text-align: right;
+  font-family: "Microsoft Sans Serif", sans-serif;
+  font-size: 1.2vw;
+  font-weight: normal;
+  color: var(--white-color);
+}
+
+.popup .symbol li{
+  text-align: center;
+  font-family: "Microsoft Sans Serif", sans-serif;
+  font-size: 1.2vw;
+  font-weight: normal;
+  color: var(--white-color);
+}
+
+.popup .quantity li{
+  text-align: left;
+  font-family: "Microsoft Sans Serif", sans-serif;
+  font-size: 1.2vw;
+  font-weight: normal;
+  color: var(--white-color);
+}
+
+.blocker{
+  position: fixed;
+  margin: 0;
+  padding: 0;
+  width: 200%;
+  height: 200%;
+  z-index: 40;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.purchase-box-up{
+  z-index: 10;
+  block-size: fit-content;
+  top: 50%;
+  right: 5%;
+  border: solid;
+  border-color: var(--white-color);
+  border-width: 2px;
+  position: absolute;
+  background: var(--bg-fog);
+}
+
+.purchase-box{
+  z-index: 10;
+  block-size: fit-content;
+  top: 64%;
+  right: 5%;
+  border: solid;
+  border-color: var(--white-color);
+  border-width: 2px;
+  position: absolute;
+  background: var(--bg-fog);
+}
+
+.purchase-box1{
+  z-index: 10;
+  block-size: fit-content;
+  top: 61%;
+  right: 5%;
+  border: solid;
+  border-color: var(--white-color);
+  border-width: 2px;
+  position: absolute;
+  background: var(--bg-fog);
+}
+
+.purchase-box3{
+  z-index: 10;
+  block-size: fit-content;
+  top: 68%;
+  right: 5%;
+  border: solid;
+  border-color: var(--white-color);
+  border-width: 2px;
+  position: absolute;
+  background: var(--bg-fog);
+}
+
+.purchase-box-up div{
+  text-align: center;
+  font-family: "Microsoft Sans Serif", sans-serif;
+  font-size: 2vw;
+  font-weight: normal;
+  color: var(--white-color);
+  margin: 1vw;
+  min-width: 11vw;
+}
+
+.purchase-box div{
+  text-align: center;
+  font-family: "Microsoft Sans Serif", sans-serif;
+  font-size: 2vw;
+  font-weight: normal;
+  color: var(--white-color);
+  margin: 0.5vw;
+  width: 12vw;
+}
+
+.purchase-box1 div{
+  text-align: center;
+  font-family: "Microsoft Sans Serif", sans-serif;
+  font-size: 2vw;
+  font-weight: normal;
+  color: var(--white-color);
+  margin: 0.5vw;
+  width: 12vw;
+}
+
+.purchase-box3 div{
+  text-align: center;
+  font-family: "Microsoft Sans Serif", sans-serif;
+  font-size: 2vw;
+  font-weight: normal;
+  color: var(--white-color);
+  margin: 0.5vw;
+  width: 12vw;
+}
+
+.purchase-box:hover{
+  cursor: pointer;
+}
+
+.profile:hover{
+  cursor: pointer;
+}
+
+.cart:hover{
+  cursor: pointer;
+}
+
